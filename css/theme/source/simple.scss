@@ -18,18 +18,22 @@
 @import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 
+@import url(../../lib/font/dcon/dcon.css);
 
 // Override theme settings (see ../template/settings.scss)
-$mainFont: 'Lato', sans-serif;
+$mainFont: 'Montserrat', 'Lato', sans-serif;
 $mainColor: #000;
-$headingFont: 'News Cycle', Impact, sans-serif;
+$headingFont: 'GlassAntiqua', 'News Cycle', Impact, sans-serif;
 $headingColor: #000;
 $headingTextShadow: none;
 $headingTextTransform: none;
 $backgroundColor: #fff;
-$linkColor: #00008B;
+$linkColor: #4c697d;
 $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
+
+$dconTitleColor: #4c697d;
+$dconFontColor: #575756;
 
 section.has-dark-background {
 	&, h1, h2, h3, h4, h5, h6 {
@@ -41,3 +45,39 @@ section.has-dark-background {
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+.reveal section.dcon-slide {
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'GlassAntiqua';
+		color: $dconTitleColor;
+	}
+
+	font-family: 'Montserrat';
+	color: $dconFontColor;
+}
+
+.footer {
+	position:relative;
+	bottom: 70px;
+	margin-left: 44.5%;
+	-webkit-transition: bottom 2s, opacity 1s;
+	transition: bottom 2s, opacity 1s;
+	opacity: 1;
+
+	&.logo-position-title {
+		bottom: 135px;
+	}
+	&.logo-position-hidden {
+		opacity: 0;
+	}
+	&.logo-position-normal {
+		bottom: 70px;
+	}
+	&.logo-position-closing {
+		bottom: 70px;
+	}
+	&.logo-position-thankyou {
+		bottom: 235px;
+	}
+}
+

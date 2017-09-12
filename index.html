@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Everybody cheer!! Here comes Media!</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/simple.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,11 +24,34 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-background="lib/dcon-title-slide.jpg" class="dcon-slide" data-state="logo-position-title">
+					<p><br /><br /><br /><br /><br /><br /><br /><br /><br />
+					</p>
+					<h2>Everybody cheer! Here comes media!</h2>
+					<p><small>Saša Nikolič, Tadej Baša</small></p>
+				</section>
+				<section data-background="lib/background.jpg" class="has-dark-background" data-state="logo-position-hidden">
+					<img data-src="lib/logo-white.png" alt="amazee logo" class="plain">
+					<p>
+						<small>Saša Nikolič</small>
+					</p>
+					<p>
+						<small>Tadej Baša <a href="http://hakim.se">paranojik</a> on d.o. / <a href="http://twitter.com/paranojik">@paranojik</a> on twitter</small>
+					</p>
+				</section>
+				<section data-state="logo-position-normal">
+					<h1>Title comes here.</h1>
+					<p>This is a regular slide</p>
+				</section>
+				<section data-background="lib/dcon-closing.jpg" class="dcon-slide" data-state="logo-position-closing">
+				</section>
+				<section data-background="lib/dcon-thank-you.jpg" class="dcon-slide" data-state="logo-position-thankyou">
+				</section>
 			</div>
 		</div>
-
+		<div id="footer" class="footer logo-position-title">
+			<a href="https://www.amazeelabs.com"><div class="logo" style="width: 100px; float: left; margin-left: 20px;"><img src="lib/logo.png" style="width: 100%;"></div></a>
+		</div>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
@@ -37,6 +60,16 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				width: 1440,
+				height: 810,
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				// Factor of the display size that should remain empty around the content
+				margin: 0.1,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
@@ -44,6 +77,22 @@
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
+
+            Reveal.addEventListener('logo-position-title', function() {
+              document.getElementById( 'footer' ).setAttribute('class', 'footer logo-position-title');
+            }, false );
+            Reveal.addEventListener('logo-position-hidden', function() {
+              document.getElementById( 'footer' ).setAttribute('class', 'footer logo-position-hidden');
+            }, false );
+            Reveal.addEventListener('logo-position-normal', function() {
+              document.getElementById( 'footer' ).setAttribute('class', 'footer logo-position-normal');
+            }, false );
+            Reveal.addEventListener('logo-position-closing', function() {
+              document.getElementById( 'footer' ).setAttribute('class', 'footer logo-position-closing');
+            }, false );
+            Reveal.addEventListener('logo-position-thankyou', function() {
+              document.getElementById( 'footer' ).setAttribute('class', 'footer logo-position-thankyou');
+            }, false );
 		</script>
 	</body>
 </html>

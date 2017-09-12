@@ -7,6 +7,7 @@
  */
 @import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@import url(../../lib/font/dcon/dcon.css);
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
   color: #fff; }
 
@@ -18,7 +19,7 @@ body {
   background-color: #fff; }
 
 .reveal {
-  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", "Lato", sans-serif;
   font-size: 40px;
   font-weight: normal;
   color: #000; }
@@ -49,7 +50,7 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #000;
-  font-family: "News Cycle", Impact, sans-serif;
+  font-family: "GlassAntiqua", "News Cycle", Impact, sans-serif;
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
@@ -213,20 +214,20 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #00008B;
+  color: #4c697d;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   transition: color .15s ease; }
 
 .reveal a:hover {
-  color: #0000f1;
+  color: #7e9cb1;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #00003f; }
+  background: #2f414d; }
 
 /*********************************************
  * IMAGES
@@ -239,7 +240,8 @@ body {
 
 .reveal section img.plain {
   border: 0;
-  box-shadow: none; }
+  box-shadow: none;
+  background: transparent; }
 
 .reveal a img {
   -webkit-transition: all .15s linear;
@@ -248,7 +250,7 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #00008B;
+  border-color: #4c697d;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
@@ -256,31 +258,31 @@ body {
  *********************************************/
 .reveal .controls .navigate-left,
 .reveal .controls .navigate-left.enabled {
-  border-right-color: #00008B; }
+  border-right-color: #4c697d; }
 
 .reveal .controls .navigate-right,
 .reveal .controls .navigate-right.enabled {
-  border-left-color: #00008B; }
+  border-left-color: #4c697d; }
 
 .reveal .controls .navigate-up,
 .reveal .controls .navigate-up.enabled {
-  border-bottom-color: #00008B; }
+  border-bottom-color: #4c697d; }
 
 .reveal .controls .navigate-down,
 .reveal .controls .navigate-down.enabled {
-  border-top-color: #00008B; }
+  border-top-color: #4c697d; }
 
 .reveal .controls .navigate-left.enabled:hover {
-  border-right-color: #0000f1; }
+  border-right-color: #7e9cb1; }
 
 .reveal .controls .navigate-right.enabled:hover {
-  border-left-color: #0000f1; }
+  border-left-color: #7e9cb1; }
 
 .reveal .controls .navigate-up.enabled:hover {
-  border-bottom-color: #0000f1; }
+  border-bottom-color: #7e9cb1; }
 
 .reveal .controls .navigate-down.enabled:hover {
-  border-top-color: #0000f1; }
+  border-top-color: #7e9cb1; }
 
 /*********************************************
  * PROGRESS BAR
@@ -289,7 +291,32 @@ body {
   background: rgba(0, 0, 0, 0.2); }
 
 .reveal .progress span {
-  background: #00008B;
+  background: #4c697d;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+.reveal section.dcon-slide {
+  font-family: 'Montserrat';
+  color: #575756; }
+  .reveal section.dcon-slide h1, .reveal section.dcon-slide h2, .reveal section.dcon-slide h3, .reveal section.dcon-slide h4, .reveal section.dcon-slide h5, .reveal section.dcon-slide h6 {
+    font-family: 'GlassAntiqua';
+    color: #4c697d; }
+
+.footer {
+  position: relative;
+  bottom: 70px;
+  margin-left: 44.5%;
+  -webkit-transition: bottom 2s, opacity 1s;
+  transition: bottom 2s, opacity 1s;
+  opacity: 1; }
+  .footer.logo-position-title {
+    bottom: 135px; }
+  .footer.logo-position-hidden {
+    opacity: 0; }
+  .footer.logo-position-normal {
+    bottom: 70px; }
+  .footer.logo-position-closing {
+    bottom: 70px; }
+  .footer.logo-position-thankyou {
+    bottom: 235px; }
