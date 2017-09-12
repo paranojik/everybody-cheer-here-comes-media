@@ -11,6 +11,9 @@
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
   color: #fff; }
 
+.dcon-blue-color {
+  color: #4c697d; }
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -59,13 +62,13 @@ body {
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 3.77em; }
+  font-size: 2.8em; }
 
 .reveal h2 {
   font-size: 2.11em; }
 
 .reveal h3 {
-  font-size: 1.55em; }
+  font-size: 1.3em; }
 
 .reveal h4 {
   font-size: 1em; }
@@ -299,9 +302,12 @@ body {
 .reveal section.dcon-slide {
   font-family: 'Montserrat';
   color: #575756; }
-  .reveal section.dcon-slide h1, .reveal section.dcon-slide h2, .reveal section.dcon-slide h3, .reveal section.dcon-slide h4, .reveal section.dcon-slide h5, .reveal section.dcon-slide h6 {
+  .reveal section.dcon-slide h1 {
     font-family: 'GlassAntiqua';
     color: #4c697d; }
+  .reveal section.dcon-slide h2, .reveal section.dcon-slide h3, .reveal section.dcon-slide h4, .reveal section.dcon-slide h5, .reveal section.dcon-slide h6 {
+    font-family: 'GlassAntiqua';
+    color: #cd9b23; }
 
 .footer {
   position: relative;

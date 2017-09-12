@@ -34,6 +34,14 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 
 $dconTitleColor: #4c697d;
 $dconFontColor: #575756;
+$dconGoldColor: #cd9b23;
+
+$heading1Size: 2.8em;
+$heading2Size: 2.11em;
+$heading3Size: 1.3em;
+$heading4Size: 1.00em;
+
+
 
 section.has-dark-background {
 	&, h1, h2, h3, h4, h5, h6 {
@@ -41,15 +49,22 @@ section.has-dark-background {
 	}
 }
 
+.dcon-blue-color {
+	color: $dconTitleColor;
+}
 
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
 
 .reveal section.dcon-slide {
-	h1, h2, h3, h4, h5, h6 {
+	h1 {
 		font-family: 'GlassAntiqua';
 		color: $dconTitleColor;
+	}
+	h2, h3, h4, h5, h6 {
+		font-family: 'GlassAntiqua';
+		color: $dconGoldColor;
 	}
 
 	font-family: 'Montserrat';
