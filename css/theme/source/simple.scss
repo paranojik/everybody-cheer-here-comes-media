@@ -21,10 +21,10 @@
 @import url(../../lib/font/dcon/dcon.css);
 
 // Override theme settings (see ../template/settings.scss)
-$mainFont: 'Montserrat', 'Lato', sans-serif;
-$mainColor: #000;
-$headingFont: 'GlassAntiqua', 'News Cycle', Impact, sans-serif;
-$headingColor: #000;
+$mainFont: 'Museo', 'Lato', sans-serif;
+$mainColor: #4e4d4b;
+$headingFont: 'Museo', 'News Cycle', Impact, sans-serif;
+$headingColor: #1d96ad;
 $headingTextShadow: none;
 $headingTextTransform: none;
 $backgroundColor: #fff;
@@ -51,6 +51,10 @@ section.has-dark-background {
 
 .dcon-blue-color {
 	color: $dconTitleColor;
+}
+
+.dcon-gold-color {
+	color: $dconGoldColor;
 }
 
 // Theme template ------------------------------

@@ -24,25 +24,300 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
+
+
 				<section data-background="lib/dcon-title-slide.jpg" class="dcon-slide" data-state="logo-position-title">
-					<p><br /><br /><br /><br /><br /><br /><br /><br /><br />
+					<p><br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
 					</p>
 					<h2>Everybody cheer! Here comes media!</h2>
 					<p><small>Saša Nikolič, Tadej Baša</small></p>
 				</section>
+
+
 				<section data-background="lib/background.jpg" class="has-dark-background" data-state="logo-position-hidden">
-					<img data-src="lib/logo-white.png" alt="amazee logo" class="plain">
-					<p>
-						<small>Saša Nikolič</small>
+					<div>
+						<img data-src="lib/logo-white.png" alt="amazee logo" class="plain" width="358" height="188">
+					</div>
+					<p style="display: inline-block; width: 49%;">
+						<span>
+							<img data-src="lib/logo-white.png" alt="sasa headshot" class="headshot" width="358" height="188">
+						</span>
+						Saša Nikolič
 					</p>
-					<p>
-						<small>Tadej Baša <a href="http://hakim.se">paranojik</a> on d.o. / <a href="http://twitter.com/paranojik">@paranojik</a> on twitter</small>
+					<p style="display: inline-block; width: 49%;">
+						<span>
+							<img data-src="lib/logo-white.png" alt="tadej headshot" class="headshot" width="358" height="188">
+						</span>
+						Tadej Baša <a href="http://hakim.se">paranojik</a> on d.o. / <a href="http://twitter.com/paranojik">@paranojik</a> on twitter
 					</p>
 				</section>
-				<section data-state="logo-position-normal">
-					<h1>Title comes here.</h1>
-					<p>This is a regular slide</p>
+
+
+				<section>
+					<h1>Overview</h1>
+					<ul>
+						<li>Struggle with Drupal 7</li>
+						<li>Drupal 8 out of the box</li>
+						<li>Media entity and Media in Core</li>
+						<li>Embedding entities</li>
+						<li>Entity browser</li>
+						<li>Bulk upload with DropzoneJS</li>
+						<li>Image Cropping</li>
+					</ul>
 				</section>
+
+
+				<section>
+					<h1>The struggle</h1>
+					<ul>
+						<li>File fields</li>
+						<li>Image fields</li>
+						<li>Cannot reuse files</li>
+						<li>Cannot add fields to files </li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h1>... the struggle continues</h1>
+					<ul>
+						<li>Media module</li>
+						<li>Media oEmbed for remote resources (YouTube, Vimeo)</li>
+						<li>Media CKEditor</li>
+						<li>Entity Embed</li>
+					</ul>
+					<p>
+						… that’s “ok”... because of modular architecture
+					</p>
+				</section>
+
+
+				<section>
+					<h1>... then came Drupal 8</h1>
+					<img />
+				</section>
+
+
+				<section>
+					<h1>Drupal 8 “out of the box”</h1>
+					<ul>
+						<li>Basic image upload</li>
+						<li>CKEditor + embedding</li>
+						<li>Basic file listing with usage info</li>
+						<li>Limitations (still)
+							<ul>
+								<li>Cannot reuse files</li>
+								<li>Embedding supports only images</li>
+								<li>Cannot add custom fields to files</li>
+								<li>Cannot reference remote media</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h1>Drupal with Media module (8.4)</h1>
+					<ul>
+						<li>Media entity type</li>
+						<li>Media sources</li>
+						<li>Image, Document (now in core)</li>
+						<li>Contrib:
+							<ul>
+								<li>Video (video_embed_field)</li>
+								<li>Twitter (media_entity_twitter)</li>
+								<li>...</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h1>Drupal with Media module (8.4)</h1>
+					<ul>
+						<li>Media sources provide metadata</li>
+						<li>
+							<ul>
+								<li>Thumbnail</li>
+								<li>Description</li>
+								<li>Size</li>
+								<li>...</li>
+							</ul>
+						</li>
+						<li>Mapping to entity fields</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h1>out of the box demo</h1>
+				</section>
+
+
+				<section>
+					<h1>Embedding media</h1>
+					<ul>
+						<li>Idea behind Entity embed</li>
+						<li>
+							<ul>
+								<li>Built on top of core’s approach (same principles)</li>
+								<li>Text filters</li>
+							</ul>
+						</li>
+						<li>Embed any entity</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h1>Embed anything</h1>
+					<ul>
+						<li>Video</li>
+						<li>Related article (node)</li>
+						<li>List of related articles (Taxonomy)</li>
+						<li>Related product (Commerce product)</li>
+						<li>Discussion thread (Comment)</li>
+						<li>...</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h1>Architecture</h1>
+					<ul>
+						<li>WYSIWYG Integration</li>
+						<li>Storage</li>
+						<li>Display</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h1>...embed demo...</h1>
+				</section>
+
+
+				<section>
+					<h1>Entity browser</h1>
+					<ul>
+						<li>Selecting from library</li>
+						<li>Uploading multiple images at once</li>
+						<li>More complex workflows</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h1>Where can I use Entity browser today?</h1>
+					<ul>
+						<li>As an entity reference field widget</li>
+						<li>As a file/image field widget</li>
+						<li>With Entity embed</li>
+						<li>In a custom form (as a form element)</li>
+						<li>In combination with Inline Entity Form</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h1>...entity browser demo...</h1>
+				</section>
+
+
+				<section>
+					<h1>Drag-and-drop upload</h1>
+					<ul>
+						<li>DropzoneJS</li>
+						<li>https://www.drupal.org/project/dropzonejs </li>
+						<li>Uses: https://github.com/enyo/dropzone - place into libraries</li>
+						<li>Inside entity browser</li>
+						<li>Bulk upload</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h1>...dropzone demo...</h1>
+				</section>
+
+
+				<section>
+					<h1>Image Cropping</h1>
+					<ul>
+						<li>Crop API - Storage for all cropping solutions</li>
+						<li>Handling crops:
+							<ul>
+								<li>Based on region - storing a crop area</li>
+								<li>Reference point</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h1>Image widget crop</h1>
+					<ul>
+						<li>Specify exact crop region</li>
+						<li>Manual - It’s a field widget</li>
+						<li>A lot of manual work if we have to define many crops</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h1>Focal point</h1>
+					<ul>
+						<li>allows editors to specify the most important part of an image before cropping occurs</li>
+						<li>Semi-Automatic</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h1>...cropping demo...</h1>
+				</section>
+
+
+				<section>
+					<h1>Resources</h1>
+					<ul>
+						<li>http://www.drupalmedia.org/</li>
+						<li>https://drupal-media.gitbooks.io/drupal8-guide/</li>
+						<li>IRC: #drupal-media @freenode</li>
+						<li>https://www.webwash.net/manage-media-assets-drupal-8/</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h1>Distributions</h1>
+					<ul>
+						<li>Lightning</li>
+						<li>Thunder</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h1>Media initiative</h1>
+					<ul>
+						<li>#mediaintiative</li>
+
+					</ul>
+					<p>Cheer!</p>
+				</section>
+
+
 				<section data-background="lib/dcon-closing.jpg" class="dcon-slide" data-state="logo-position-closing">
 					<h1>JOIN US FOR	CONTRIBUTION SPRINT</h1>
 					<h2>Friday, 29 September, 2017</h2>
@@ -69,9 +344,23 @@
 						</tr>
 					</table>
 					<br />
-					<h2>#drupalsprints</h2>
+					<span style="font-size: 1.3em" class="dcon-gold-color">#drupalsprints</span>
 				</section>
+
+
 				<section data-background="lib/dcon-thank-you.jpg" class="dcon-slide" data-state="logo-position-thankyou">
+					<h1>WHAT DID YOU THINK?</h1><br />
+					<p>
+						Locate this session at the DrupalCon Vienna website:<br />
+						<a href="http://vienna2017.drupal.org/schedule">http://vienna2017.drupal.org/schedule</a><br />
+						<br />
+						Take the survey!<br />
+						<a href="https://www.surveymonkey.com/r/drupalconvienna">https://www.surveymonkey.com/r/drupalconvienna</a><br />
+						<br />
+						<br />
+						<br />
+						<br />
+					</p>
 				</section>
 			</div>
 		</div>
