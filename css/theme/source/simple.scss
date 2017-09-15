@@ -41,7 +41,8 @@ $heading2Size: 2.11em;
 $heading3Size: 1.3em;
 $heading4Size: 1.00em;
 
-
+// Progress bar should not be clickable!
+.progress { pointer-events: none; }
 
 section.has-dark-background {
 	&, h1, h2, h3, h4, h5, h6 {

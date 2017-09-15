@@ -61,7 +61,7 @@
 				</section>
 
 
-				<section>
+				<section data-state="logo-position-normal">
 					<h1>Overview</h1>
 					<ul>
 						<li>Struggle with Drupal 7</li>
@@ -75,7 +75,7 @@
 				</section>
 
 
-				<section>
+				<section data-state="logo-position-normal">
 					<h1>The struggle</h1>
 					<ul>
 						<li>File fields</li>
@@ -86,7 +86,7 @@
 				</section>
 
 
-				<section>
+				<section data-state="logo-position-normal">
 					<h1>... the struggle continues</h1>
 					<ul>
 						<li>Media module</li>
@@ -100,13 +100,32 @@
 				</section>
 
 
-				<section>
+				<section data-state="logo-position-normal">
 					<h1>... then came Drupal 8</h1>
 					<img />
 				</section>
 
 
-				<section>
+				<!-- Demo of drupal 8 out of the box -->
+				<section data-background-color="#000000" data-state="logo-position-hidden">
+					<video class="stretch">
+						<source data-src="resources/test.webm" type="video/webm" />
+					</video>
+				</section>
+
+
+				<section data-background="http://i.giphy.com/90F8aUepslB84.gif" data-state="logo-position-hidden">
+					<h2>Amazeeing, right?</h2>
+				</section>
+
+
+				<!-- TODO: find dissapointing gify -->
+				<section data-background="http://i.giphy.com/90F8aUepslB84.gif" data-state="logo-position-hidden">
+					<h2>... or is it ?!</h2>
+				</section>
+
+
+				<section data-state="logo-position-normal">
 					<h1>Drupal 8 “out of the box”</h1>
 					<ul>
 						<li>Basic image upload</li>
@@ -124,12 +143,30 @@
 				</section>
 
 
-				<section>
+				<section data-state="logo-position-normal">
+					<h1>Media initiative and the media_entity ecosystem</h1>
+					<ul>
+						<li>Ability to reuse content</li>
+						<li>Media library</li>
+						<li>Remote media sources</li>
+						<li>Generic solution for media handling
+							<ul>
+								<li>Metadata</li>
+								<li>Embedding</li>
+								<li>Cropping</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+
+				<section data-state="logo-position-normal">
 					<h1>Drupal with Media module (8.4)</h1>
 					<ul>
 						<li>Media entity type</li>
 						<li>Media sources</li>
-						<li>Image, Document (now in core)</li>
+						<li>Propagate storage to fields</li>
+						<li>Basic types: Image, Document (now in core)</li>
 						<li>Contrib:
 							<ul>
 								<li>Video (video_embed_field)</li>
@@ -141,7 +178,7 @@
 				</section>
 
 
-				<section>
+				<section data-state="logo-position-normal">
 					<h1>Drupal with Media module (8.4)</h1>
 					<ul>
 						<li>Media sources provide metadata</li>
@@ -153,17 +190,17 @@
 								<li>...</li>
 							</ul>
 						</li>
-						<li>Mapping to entity fields</li>
+						<li>Mapping of metadata to entity fields</li>
 					</ul>
 				</section>
 
 
-				<section>
-					<h1>out of the box demo</h1>
+				<!-- TODO: demo, create custom media type -->
+				<section data-background-video="resources/test.webm" data-background-interactive data-state="logo-position-hidden">
 				</section>
 
 
-				<section>
+				<section data-state="logo-position-normal">
 					<h1>Embedding media</h1>
 					<ul>
 						<li>Idea behind Entity embed</li>
@@ -178,7 +215,7 @@
 				</section>
 
 
-				<section>
+				<section data-state="logo-position-normal">
 					<h1>Embed anything</h1>
 					<ul>
 						<li>Video</li>
@@ -191,7 +228,7 @@
 				</section>
 
 
-				<section>
+				<section data-state="logo-position-normal">
 					<h1>Architecture</h1>
 					<ul>
 						<li>WYSIWYG Integration</li>
@@ -201,12 +238,12 @@
 				</section>
 
 
-				<section>
+				<section data-state="logo-position-normal">
 					<h1>...embed demo...</h1>
 				</section>
 
 
-				<section>
+				<section data-state="logo-position-normal">
 					<h1>Entity browser</h1>
 					<ul>
 						<li>Selecting from library</li>
@@ -216,7 +253,7 @@
 				</section>
 
 
-				<section>
+				<section data-state="logo-position-normal">
 					<h1>Where can I use Entity browser today?</h1>
 					<ul>
 						<li>As an entity reference field widget</li>
@@ -228,12 +265,12 @@
 				</section>
 
 
-				<section>
+				<section data-state="logo-position-normal">
 					<h1>...entity browser demo...</h1>
 				</section>
 
 
-				<section>
+				<section data-state="logo-position-normal">
 					<h1>Drag-and-drop upload</h1>
 					<ul>
 						<li>DropzoneJS</li>
@@ -245,12 +282,12 @@
 				</section>
 
 
-				<section>
+				<section data-state="logo-position-normal">
 					<h1>...dropzone demo...</h1>
 				</section>
 
 
-				<section>
+				<section data-state="logo-position-normal">
 					<h1>Image Cropping</h1>
 					<ul>
 						<li>Crop API - Storage for all cropping solutions</li>
@@ -264,7 +301,7 @@
 				</section>
 
 
-				<section>
+				<section data-state="logo-position-normal">
 					<h1>Image widget crop</h1>
 					<ul>
 						<li>Specify exact crop region</li>
@@ -274,7 +311,7 @@
 				</section>
 
 
-				<section>
+				<section data-state="logo-position-normal">
 					<h1>Focal point</h1>
 					<ul>
 						<li>allows editors to specify the most important part of an image before cropping occurs</li>
@@ -283,12 +320,12 @@
 				</section>
 
 
-				<section>
+				<section data-state="logo-position-normal">
 					<h1>...cropping demo...</h1>
 				</section>
 
 
-				<section>
+				<section data-state="logo-position-normal">
 					<h1>Resources</h1>
 					<ul>
 						<li>http://www.drupalmedia.org/</li>
@@ -299,7 +336,7 @@
 				</section>
 
 
-				<section>
+				<section data-state="logo-position-normal">
 					<h1>Distributions</h1>
 					<ul>
 						<li>Lightning</li>
@@ -308,7 +345,7 @@
 				</section>
 
 
-				<section>
+				<section data-state="logo-position-normal">
 					<h1>Media initiative</h1>
 					<ul>
 						<li>#mediaintiative</li>
