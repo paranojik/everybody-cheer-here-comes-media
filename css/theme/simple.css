@@ -244,6 +244,7 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
+  border: 4px solid #4e4d4b;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal section img.plain {
@@ -331,3 +332,13 @@ body {
     bottom: 70px; }
   .footer.logo-position-thankyou {
     bottom: 235px; }
+
+.social a {
+  color: white; }
+
+.twitter:before {
+  content: "";
+  display: inline-block;
+  background: url("../../../lib/img/twitter.png") no-repeat;
+  width: 40px;
+  height: 40px; }
