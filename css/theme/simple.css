@@ -342,3 +342,6 @@ body {
   background: url("../../../lib/img/twitter.png") no-repeat;
   width: 40px;
   height: 40px; }
+
+.media-team li {
+  display: inline-block; }
