@@ -98,19 +98,22 @@
 					</aside>
 				</section>
 
-				
+
 				<section data-state="logo-position-normal">
 					<h1>Required modules</h1>
 					<ul>
 						<li>Drupal 8.4-dev (with Media enabled)</li>
 						<li>Video Embed Field (with video_embed_media)</li>
 						<li>Embed and Entity Embed</li>
-						<li>Entity Browser</li>
+						<li>Inline Entity Form</li>
 						<li>Ctools</li>
+						<li>Entity Browser (with entity_browser_entity_form)</li>
 						<li>DropzoneJS (with dropzonejs_eb_widget)</li>
 						<li>Inline Entity Form</li>
 						<li>Crop API, Image Widget Crop, Focal point</li>
 					</ul>
+					<br />
+					<small><a href="https://github.com/paranojik/media_starter">https://github.com/paranojik/media_starter</a> (install media_starter profile)</small>
 					<aside class="notes">
 						For the sake of this presentation we will be using the following modules. We suggest you use them when dealing with images and videos from now on, and maybe add some more.
 					</aside>
@@ -195,10 +198,7 @@
 
 
 				<!-- Demo of drupal 8 out of the box -->
-				<section data-background-color="#000000" data-state="logo-position-hidden">
-					<video class="stretch">
-						<source data-src="resources/test.webm" type="video/webm" />
-					</video>
+				<section data-background-video="resources/d8_out_of_the_box.webm" data-background-interactive data-state="logo-position-hidden">
 					<aside class="notes">
 						- So first let’s see what Drupal 8 looks like out-of the-box. What we’re looking at now is a clean Drupal installation using the standard installation profile so most of the stuff is already preconfigured.
 						<br />
@@ -218,7 +218,7 @@
 
 
 				<!-- TODO: find dissapointing gify -->
-				<section data-background="http://i.giphy.com/90F8aUepslB84.gif" data-state="logo-position-hidden">
+				<section data-background="https://media.giphy.com/media/3oz8xYhan5nJy8vXJC/giphy.gif" data-state="logo-position-hidden">
 					<h2 style="color: white;">... or is it ?!</h2>
 					<aside class="notes">
 						- Amazing right? Or is it? <br />
@@ -255,6 +255,7 @@
 				<section data-state="logo-position-normal">
 					<h1>Media initiative</h1>
 					<ul>
+						<li>Prague - NY - New Orelans</li>
 						<li>Media_entity ecosystem</li>
 						<li>Ability to reuse content</li>
 						<li>Media library</li>
@@ -276,20 +277,19 @@
 
 
 				<section data-state="logo-position-normal">
-					<h1>Media entity in core</h1>
+					<h1>Media entity</h1>
 					<ul>
-						<li>Media in Drupal 8.4</li>
-						<li>Media entity type</li>
-						<li>Media sources</li>
 						<li>Propagate storage to fields</li>
-						<li>Basic types: Image, Document (now in core)</li>
-						<li>Contrib:
+						<li>Media sources provide metadata</li>
+						<li>
 							<ul>
-								<li>Video (video_embed_field)</li>
-								<li>Twitter (media_entity_twitter)</li>
+								<li>Thumbnail</li>
+								<li>Description</li>
+								<li>Size</li>
 								<li>...</li>
 							</ul>
 						</li>
+						<li>Mapping of metadata to entity fields</li>
 					</ul>
 					<aside class="notes">
 						- After the official media initiative was announced at DrupalCon New Orleans work has begun to bring the media_entity into core. It is now called only “Media”. It’s a stable but hidden module. It is hidden because it actually doesn’t do much on it’s own. So far it only provides support for local images and documents (pdf,...) and a lot of the usability stuff needs to be addressed. So it is still up to contrib to leverage the media APIs and extend the functionality just as before. <br />
@@ -303,16 +303,16 @@
 				<section data-state="logo-position-normal">
 					<h1>Media entity in core</h1>
 					<ul>
-						<li>Media sources provide metadata</li>
-						<li>
+						<li>Media Entity -> Media in Drupal 8.4</li>
+						<li>Improved API</li>
+						<li>Basic types: Image, Document (now in core)</li>
+						<li>Contrib:
 							<ul>
-								<li>Thumbnail</li>
-								<li>Description</li>
-								<li>Size</li>
+								<li>Video (video_embed_field)</li>
+								<li>Twitter (media_entity_twitter)</li>
 								<li>...</li>
 							</ul>
 						</li>
-						<li>Mapping of metadata to entity fields</li>
 					</ul>
 					<aside class="notes">
 						- Media source plugins are usually implemented in separate modules. (image and documents are in core 8.4).
@@ -320,16 +320,40 @@
 					</aside>
 				</section>
 
+				<!-- https://www.youtube.com/watch?v=72NfSwCzFVE -->
+
 
 				<!-- TODO: DEMO, create custom media type -->
 				<section data-background-video="resources/test.webm" data-background-interactive data-state="logo-position-hidden">
-					<aside class="notes">
-						- So let’s see on our example what happens when we enable the new Media module in Drupal 8.4. We have to do this either via drush as Media is a hidden module, or by enabling a module that depends on Media,... oh and of course after that you need to clear the cache! :) <br />
-						- If we now go to the Admin -> Structure path we see that have a new menu Item “Media types” and under that “Image and Document” is already defined for us. This is a replacement for the traditional “File” and “Image” fields. <br />
-						- Let’s try and add another Media type. We’ll add Videos using the video_embed_field module which defines a Media source for referencing remote videos (Youtube, Vimeo,...). The module is already enabled for this example.
-					</aside>
+
+				<!-- DEMO enable instagram and media -->
+				<section data-background-video="resources/enable_instagram.webm" data-background-interactive data-state="logo-position-hidden">
+					<aside class="notes">Enable instagram and media
+							- So let’s see on our example what happens when we enable the new Media module in Drupal 8.4. We have to do this either via drush as Media is a hidden module, or by enabling a module that depends on Media,... oh and of course after that you need to clear the cache! :) <br />
+							- If we now go to the Admin -> Structure path we see that have a new menu Item “Media types” and under that “Image and Document” is already defined for us. This is a replacement for the traditional “File” and “Image” fields. <br />
+							- Let’s try and add another Media type. We’ll add Videos using the video_embed_field module which defines a Media source for referencing remote videos (Youtube, Vimeo,...). The module is already enabled for this example.
+						</aside>
 				</section>
 
+				<section data-background-video="resources/add_instagram_type.webm" data-background-interactive data-state="logo-position-hidden">
+					<aside class="notes">Add instagram media type</aside>
+				</section>
+
+				<section data-background-video="resources/instagram_add_fields.webm" data-background-interactive data-state="logo-position-hidden">
+					<aside class="notes">Add metadata fields</aside>
+				</section>
+
+				<section data-background-video="resources/instagram_configure_form_display.webm" data-background-interactive data-state="logo-position-hidden">
+					<aside class="notes">Configure form display</aside>
+				</section>
+
+				<section data-background-video="resources/instagram_configure_display_mode.webm" data-background-interactive data-state="logo-position-hidden">
+					<aside class="notes">Configure display mode</aside>
+				</section>
+
+				<section data-background-video="resources/instagram_configure_mapping.webm" data-background-interactive data-state="logo-position-hidden">
+					<aside class="notes">Set metadata mapping</aside>
+				</section>
 
 				<section data-state="logo-position-normal">
 					<h1>Entity browser</h1>
@@ -348,6 +372,11 @@
 					</aside>
 				</section>
 
+				<section data-state="logo-position-normal">
+					<h3>Entity browser - architecture</h3>
+					<img src="resources/eb_architecture.png" style="max-height: 600px">
+					<p style="font-size: 18px; color: grey;">Source: https://slashrsm.github.io/entity-browser-session/#/architecture-wireframe</p>
+				</section>
 
 				<section data-state="logo-position-normal">
 					<h1>Entity browser in use</h1>
