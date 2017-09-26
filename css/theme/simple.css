@@ -333,5 +333,15 @@ body {
   .footer.logo-position-thankyou {
     bottom: 235px; }
 
+.social a {
+  color: white; }
+
+.twitter:before {
+  content: "";
+  display: inline-block;
+  background: url("../../../lib/img/twitter.png") no-repeat;
+  width: 40px;
+  height: 40px; }
+
 .media-team li {
   display: inline-block; }
