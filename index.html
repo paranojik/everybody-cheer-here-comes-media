@@ -510,15 +510,14 @@
 				</section>
 
 
-				<!-- TODO: EMBED DEMO -->
-				<section data-state="logo-position-normal">
-					<h1>...embed demo...</h1>
+				<!-- Configure embed button -->
+				<section data-background-video="resources/configure_embed_button.webm" data-background-interactive data-state="logo-position-hidden">
 					<aside class="notes">
 						Let’s see it in action.
 						1.) After downloading and installing the Entity Embed module and its dependencies, navigate to Configuration -> Content Authoring -> Text editor embed buttons and click on Add embed button <br />
 						2.) On this page you will see that there is already one embed button created - this is used to embed nodes and is automatically created upon install. <br />
 						3.) In our example we’re creating a button to embed images and videos, let’s call it Multimedia.<br />
-					  4.) We will be using an entity browser to upload and reuse images, so we select that one.<br />
+					  	4.) We will be using an entity browser to upload and reuse images, so we select that one.<br />
 						5.) As a tip, we’d always suggest you add an icon to your embed buttons in order to distinguish them. If you don’t do that, the icon will be set by default to the E icon and might be confusing for the user when having different embed buttons in the toolbar.<br />
 						6.) Now let’s navigate to the text editors screen and add our newly created button to the toolbar.<br />
 						7.) Make sure to mark the checkbox “Display embedded entities”<br />
@@ -530,6 +529,27 @@
 						12.) After clicking the Multimedia embed button we are prompted with some options, where we can choose how we want to display and align the image.<br />
 					</aside>
 				</section>
+
+				<!-- Configure input filter -->
+				<section data-background-video="resources/configure_text_format.webm" data-background-interactive data-state="logo-position-hidden">
+					<aside>
+						6.) Now let’s navigate to the text editors screen and add our newly created button to the toolbar.<br />
+						7.) Make sure to mark the checkbox “Display embedded entities”<br />
+						8.) And also make sure that the special tags are whitelisted in the Allowed HTML tags area<br />
+						(PAUSE THE VIDEO HERE A BIT)<br />
+						9.) What happens behind the scenes is that every entity that we embed with the Entity Embed module  gets converted to an entity of this type, with the corresponding attributes<br />
+						10.) Another tip here: If you want to use alt and title tags with the images, you need to fine-tune the allowed html tags and add them manually to the attributes list.<br />
+					</aside>
+				</section>
+
+				<!-- Add new video to the post -->
+				<section data-background-video="resources/embed_video.webm" data-background-interactive data-state="logo-position-hidden">
+					<aside>
+						11.) With this we are all set. Your editors can now navigate to any content form that uses the “Basic HTML” text format and start using the button, for example we can embed an image to an Article node<br />
+						12.) After clicking the Multimedia embed button we are prompted with some options, where we can choose how we want to display and align the image.<br />
+					</aside>
+				</section>
+
 
 				<section data-state="logo-position-normal">
 					<h1>URL Embed</h1>
