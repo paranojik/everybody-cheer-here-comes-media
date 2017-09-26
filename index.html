@@ -390,6 +390,12 @@
 					<h3>Entity browser - architecture</h3>
 					<img src="resources/eb_architecture.png" style="max-height: 600px">
 					<p style="font-size: 18px; color: grey;">Source: https://slashrsm.github.io/entity-browser-session/#/architecture-wireframe</p>
+					<aside class="notes">
+						- It has a pluggable architecture, meaning everybody can implement parts which best suit their needs. <br />
+						- The main part is called the WIDGET. That’s where the entity selection is taking place. It could be a view or an upload form, a form connected to some external DAM system, etc… <br />
+						- On top we have the “Widget selector” Part that defines how switching between widgets work. Can be dropdown, buttons, tabs,... <br />
+						- At the bottom we have the “Selection display”: This part that displays entities that are currently selected. It’s like some sort of clipboard. <br />
+					</aside>
 				</section>
 
 				<section data-state="logo-position-normal">
@@ -437,17 +443,28 @@
 
 				<section data-state="logo-position-normal">
 					<h1>Embedding media</h1>
+					<aside class="notes">
+						- Drupal 8 has made a big step from Drupal 7 and included the CKEditor WYSIWYG library in core. It also comes with an easy-to-use tool to embed local images in your text. <br />
+						- But what if the content you want to embed is not an image?
+					</aside>
 				</section>
 
 				<!-- TODO: EMBED SLIKA VIDEA-->
 				<section data-state="logo-position-normal">
 					<h1>...slika embeddanega videa...</h1>
+					<aside class="notes">
+						- I am sure you have come across something like this before:
+					</aside>
 				</section>
 
 
 				<!-- TODO: EMBED SLIKA TWEETA al FB posta -->
 				<section data-state="logo-position-normal">
 					<h1>...slika embeddanega tweeta al fb posta...</h1>
+					<aside class="notes">
+						- Or maybe something like this:
+						- These are all examples of non-image media assets that needed to be embedded as well.
+					</aside>
 				</section>
 
 
@@ -464,6 +481,9 @@
 					<!--</li>-->
 					<!--<li>Embed any entity</li>-->
 					<!--</ul>-->
+					<aside class="notes">
+						- This is where the powerful combination of Entity Embed + URL Embed comes into play. Predicated on, and extending the foundation established by Drupal core, these two modules were designed to be a standardized solution for embedding any entity or remote URL content in a WYSIWYG editor in Drupal 8.
+					</aside>
 				</section>
 
 
@@ -477,12 +497,31 @@
 						<li>Discussion thread (Comment)</li>
 						<li>...</li>
 					</ul>
+					<aside class="notes">
+						- The module doesn't care what you embed, as long as that piece of content is stored in Drupal as a standard entity. In other words, you can embed nodes, taxonomy terms, comments, users, profiles, forms, media entities, etc. all in the same way and using a standard workflow.
+					</aside>
 				</section>
 
 
 				<!-- TODO: EMBED DEMO -->
 				<section data-state="logo-position-normal">
 					<h1>...embed demo...</h1>
+					<aside class="notes">
+						Let’s see it in action.
+						1.) After downloading and installing the Entity Embed module and its dependencies, navigate to Configuration -> Content Authoring -> Text editor embed buttons and click on Add embed button <br />
+						2.) On this page you will see that there is already one embed button created - this is used to embed nodes and is automatically created upon install. <br />
+						3.) In our example we’re creating a button to embed images and videos, let’s call it Multimedia.<br />
+					  4.) We will be using an entity browser to upload and reuse images, so we select that one.<br />
+						5.) As a tip, we’d always suggest you add an icon to your embed buttons in order to distinguish them. If you don’t do that, the icon will be set by default to the E icon and might be confusing for the user when having different embed buttons in the toolbar.<br />
+						6.) Now let’s navigate to the text editors screen and add our newly created button to the toolbar.<br />
+						7.) Make sure to mark the checkbox “Display embedded entities”<br />
+						8.) And also make sure that the special tags are whitelisted in the Allowed HTML tags area<br />
+						(PAUSE THE VIDEO HERE A BIT)<br />
+						9.) What happens behind the scenes is that every entity that we embed with the Entity Embed module  gets converted to an entity of this type, with the corresponding attributes<br />
+						10.) Another tip here: If you want to use alt and title tags with the images, you need to fine-tune the allowed html tags and add them manually to the attributes list.<br />
+						11.) With this we are all set. Your editors can now navigate to any content form that uses the “Basic HTML” text format and start using the button, for example we can embed an image to an Article node<br />
+						12.) After clicking the Multimedia embed button we are prompted with some options, where we can choose how we want to display and align the image.<br />
+					</aside>
 				</section>
 
 				<section data-state="logo-position-normal">
@@ -491,6 +530,9 @@
 						<li>Embed remote content</li>
 						<li>Facebook, Twitter, Instagram...</li>
 					</ul>
+					<aside class="notes">
+						- A sister-module of Entity Embed, the URL Embed module allows content editors to quickly embed any piece of remote content from many different providers, such as Facebook, Flickr, Twitter, Instagram, Youtube videos etc.
+					</aside>
 				</section>
 
 
@@ -509,6 +551,10 @@
 							</ul>
 						</li>
 					</ul>
+					<aside class="notes">
+						- The Crop API provides storage for “hopefully” all cropping solutions. It is able to handle crops based on region and reference point concepts. We won’t get into details, but rather show two different implementations based on the Crop API.<br />
+						- Cropping information is saved per file. The problem is that the image style system does not have knowledge about the usage of the file.
+					</aside>
 				</section>
 
 
