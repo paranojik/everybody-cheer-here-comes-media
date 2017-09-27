@@ -114,8 +114,6 @@
 						<li>DropzoneJS</li>
 						<li>Crop API, Image Widget Crop, Focal point</li>
 					</ul>
-					<br />
-
 					<aside class="notes">
 						For the sake of this presentation we will be using the following modules. We expect that everyone here knows how to download and enable a module from drupal.org and strongly suggest you use them when dealing with images and videos from now on, and maybe add some more if you need some extra functionality.
 					</aside>
@@ -138,11 +136,11 @@
 						<li>Cannot reuse files</li>
 					</ul>
 					<aside class="notes">
-						We strongly believe that media is at the heart of a great website experience. Everybody loves having big images, videos, audio files on their websites - this is what brings a website to life for your users. Let’s see some specific issues in Drupal 7:
+						We strongly believe that media is at the heart of a great website experience. Everybody loves having big images, videos, audio files on their websites - this is what brings a website to life for your users. Let’s see some specific issues that we faced when handling media in Drupal 7:
 						<ul>
 							<li>So when you installed drupal 7 out of the box… what kind of functionality did you get? Well, you didn’t really get much. You didn’t get an editor and there was no proper media management.</li>
-							<li>Basically there were just image and file fields and the interactions with files are very limited, that means that we cannot add any metadata (like caption, copyright info) do them (because they are not entities).</li>
-							<li>What is more, We couldn't reuse any images that we previously uploaded...</li>
+							<li>Basically there were just image and file fields and the interactions with files are very limited, that means that we cannot add any metadata (like caption, copyright info) to them (because they are not entities).</li>
+							<li>What is more, we couldn't even reuse any images that we previously uploaded...</li>
 						</ul>
 					</aside>
 				</section>
@@ -164,7 +162,7 @@
 						<li>Entity Embed</li>
 					</ul>
 					<p>
-						… that’s “ok”... because of modular architecture
+            That’s ok... because of the modular architecture
 					</p>
 					<aside class="notes">
 						- The most popular by far to handle media is of course, the Media module. <br/>
@@ -186,7 +184,7 @@
 					<img src="lib/img/imce.jpg" />
 					<p style="font-size: 18px; color: grey;">Source: <a href="https://www.drupal.org/project/imce">https://www.drupal.org/project/imce</a></p>
 					<aside class="notes">
-						- Image/file uploader that lets you browse folders in Drupal’s /files directory. It’s been around since 2006 and it looks like something brought in from Joomla… but if you know its limitations, it’s a good solution.
+						- And of course, who doesn't know IMCE. This is a simple image/file uploader that lets you browse folders in Drupal’s /files directory. It’s been around since 2006 and it looks like something brought in from Joomla… but if you know its limitations, it’s a good solution.
 					</aside>
 				</section>
 
@@ -209,7 +207,7 @@
 						<br />
 						...
 						<br />
-						- What do we as site builders / users get from Drupal from a fresh install? We can host images locally, we can upload images in bulk with the new HTML5l file upload element. We have a file listing. We have usage tracking. Which means that every time you reference an image or embed it in wysiwyg Drupal will increase a counter for that file.
+						- What do we as site builders / users get from Drupal from a fresh install? We can host images locally, we can upload images in bulk with the new HTML5 file upload element. We have a file listing. We have usage tracking. Which means that every time you reference an image or embed it in wysiwyg Drupal will increase a counter for that file.
 						We have basic embedding of images in wysiwyg. But works only for images. You can’t embed videos with that. You can set a caption, alt text and alignment.
 					</aside>
 				</section>
@@ -381,7 +379,7 @@
 					</aside>
 				</section>
 
-				<section data-state="logo-position-normal">
+				<section data-state="logo-position-hidden">
 					<h3>Entity browser - architecture</h3>
 					<img src="resources/eb_architecture.png" style="max-height: 600px">
 					<p style="font-size: 18px; color: grey;">Source: <a href="https://slashrsm.github.io/entity-browser-session/#/architecture-wireframe">https://slashrsm.github.io/entity-browser-session/#/architecture-wireframe</a></p>
@@ -459,8 +457,10 @@
 				<section data-state="logo-position-normal">
 					<h1>Embedding media</h1>
 					<aside class="notes">
-						- Drupal 8 has made a big step from Drupal 7 and included the CKEditor WYSIWYG library in core. It also comes with an easy-to-use tool to embed local images in your text. <br />
-						- But what if the content you want to embed is not an image?
+            <ul>
+              <li>Drupal 8 has made a big step from Drupal 7 and included the CKEditor WYSIWYG library in core. It also comes with an easy-to-use tool to embed local images in your text. </li>
+              <li>But what if the content you want to embed is not an image?</li>
+            </ul>
 					</aside>
 				</section>
 
@@ -468,7 +468,7 @@
 					<img src="lib/img/embedded-captcha.png" style="box-shadow: none;"/>
 					<p style="font-size: 18px; color: grey;">Source: <a href="https://www.nytimes.com">https://www.nytimes.com</a></p>
 					<aside class="notes">
-						- I am sure you have come across something like this before:
+						I am sure you have come across something like this before:
 					</aside>
 				</section>
 
@@ -478,8 +478,14 @@
 					<img src="lib/img/embedded-tweet.png" style="box-shadow: none;"/>
 					<p style="font-size: 18px; color: grey;">Source: <a href="https://www.nytimes.com">https://www.nytimes.com</a></p>
 					<aside class="notes">
-						- Or maybe something like this:
-						- These are all examples of non-image media assets that needed to be embedded as well.
+            <ul>
+              <li>
+                Or maybe something like this:
+              </li>
+              <li>
+                These are all examples of non-image media assets that needed to be embedded as well.
+              </li>
+            </ul>
 					</aside>
 				</section>
 
@@ -498,8 +504,12 @@
 					<!--<li>Embed any entity</li>-->
 					<!--</ul>-->
 					<aside class="notes">
-						- This is where the powerful combination of Entity Embed comes into play. Predicated on, and extending the foundation established by Drupal core, these two modules were designed to be a standardized solution for embedding any entity or remote URL content in a WYSIWYG editor in Drupal 8.
-					</aside>
+            <ul>
+              <li>
+                This is where the Entity Embed module comes into play. By extending the foundation established by Drupal core, this module has become a standardized solution for embedding any entity or remote URL content in a WYSIWYG editor in Drupal 8.
+              </li>
+            </ul>
+          </aside>
 				</section>
 
 
@@ -514,8 +524,11 @@
 						<li>...</li>
 					</ul>
 					<aside class="notes">
-						- The module doesn't care what you embed, as long as that piece of content is stored in Drupal as a standard entity. In other words, you can embed nodes, taxonomy terms, comments, users, profiles, forms, media entities, etc. all in the same way and using a standard workflow.
-					</aside>
+            <ul>
+              <li>The module doesn't care what you embed, as long as that piece of content is stored in Drupal as a standard entity.</li>
+              <li>In other words, you can embed nodes, taxonomy terms, comments, users, profiles, forms, media entities, etc. all in the same way and using a standard workflow.</li>
+            </ul>
+          </aside>
 				</section>
 
 
@@ -524,19 +537,11 @@
 					<aside class="notes">
 						Let’s see it in action.
 						1.) After downloading and installing the Entity Embed module and its dependencies, navigate to Configuration -> Content Authoring -> Text editor embed buttons and click on Add embed button <br />
-						2.) On this page you will see that there is already one embed button created - this is used to embed nodes and is automatically created upon install. <br />
+						2.) Already one button created for embedding nodes<br />
 						3.) In our example we’re creating a button to embed images and videos, let’s call it Multimedia.<br />
-					  	4.) We will be using an entity browser to upload and reuse images, so we select that one.<br />
-						5.) As a tip, we’d always suggest you add an icon to your embed buttons in order to distinguish them. If you don’t do that, the icon will be set by default to the E icon and might be confusing for the user when having different embed buttons in the toolbar.<br />
-						6.) Now let’s navigate to the text editors screen and add our newly created button to the toolbar.<br />
-						7.) Make sure to mark the checkbox “Display embedded entities”<br />
-						8.) And also make sure that the special tags are whitelisted in the Allowed HTML tags area<br />
-						(PAUSE THE VIDEO HERE A BIT)<br />
-						9.) What happens behind the scenes is that every entity that we embed with the Entity Embed module  gets converted to an entity of this type, with the corresponding attributes<br />
-						10.) Another tip here: If you want to use alt and title tags with the images, you need to fine-tune the allowed html tags and add them manually to the attributes list.<br />
-						11.) With this we are all set. Your editors can now navigate to any content form that uses the “Basic HTML” text format and start using the button, for example we can embed an image to an Article node<br />
-						12.) After clicking the Multimedia embed button we are prompted with some options, where we can choose how we want to display and align the image.<br />
-					</aside>
+            4.) We will be using an entity browser to upload and reuse images, so we select that one.<br />
+						5.) TIP: create new embed icon for every embed button
+          </aside>
 				</section>
 
 
@@ -546,10 +551,10 @@
 						6.) Now let’s navigate to the text editors screen and add our newly created button to the toolbar.<br />
 						7.) Make sure to mark the checkbox “Display embedded entities”<br />
 						8.) And also make sure that the special tags are whitelisted in the Allowed HTML tags area<br />
-						(PAUSE THE VIDEO HERE A BIT)<br />
-						9.) What happens behind the scenes is that every entity that we embed with the Entity Embed module  gets converted to an entity of this type, with the corresponding attributes<br />
-						10.) Another tip here: If you want to use alt and title tags with the images, you need to fine-tune the allowed html tags and add them manually to the attributes list.<br />
-					</aside>
+						9.) What happens behind the scenes is that every image or video that we embed with the Entity Embed module  gets converted to an entity of this type, with the corresponding attributes<br />
+						10.) TIP 1: add alt and title to the attributes in the whitelist<br />
+					  11.) TIP 2: Make sure "Display embedded entities" is below "Restrict images om this site".
+          </aside>
 				</section>
 
 				<!-- Add new video to the post -->
@@ -586,9 +591,8 @@
 						</li>
 					</ul>
 					<aside class="notes">
-						- The Crop API provides storage for “hopefully” all cropping solutions. It is able to handle crops based on region and reference point concepts. We won’t get into details, but rather show two different implementations based on the Crop API.<br />
-						- Cropping information is saved per file. The problem is that the image style system does not have knowledge about the usage of the file.
-					</aside>
+            The Crop API provides storage for “hopefully” all cropping solutions. It is able to handle crops based on region and reference point concepts. We won’t get into details, but rather show two different implementations based on the Crop API.<br /></li>
+          </aside>
 				</section>
 
 
@@ -597,11 +601,14 @@
 					<ul>
 						<li>Specify exact crop region</li>
 						<li>Manual - It’s a field widget</li>
-						<li>A lot of manual work if we have to define many crops</li>
+						<li>Many crops &rarr; more work</li>
 					</ul>
 					<aside class="notes">
-						Provides a new image field widget that allows you to specify an exact crop region. Because it's a field widget it means it involves manual work, so if you want to define many crop types, you need to do that manually... This of course means more work for the editor.
-					</aside>
+            <ul>
+              <li>Provides a new image field widget that allows you to specify an exact crop region.</li>
+              <li>Because it's a field widget it means it involves manual work, so if you want to define many crop types, you need to do that manually... This of course means more work for the editor.</li>
+            </ul>
+						 </aside>
 				</section>
 
 
@@ -619,8 +626,11 @@
 				<!-- TODO: CROPPING DEMO -->
 				<section data-background-iframe="resources/crop_configure_crop_type_2.webm" data-background-interactive data-state="logo-position-hidden">
 					<aside class="notes">
-						- In this short demo we’re focusing on the most important part of the image, first with the image widget crop, where we select an area which we want to crop.
-						- We see that we reached the soft and hard limits now and that the cropping is not possible for this size.<br/>
+            <ul>
+              <li>First we need to create a new crop type and set the soft and the hard limits.</li>
+              <li>Soft limits...</li>
+              <li>Hard limits...</li>
+            </ul>
 					</aside>
 				</section>
 
@@ -638,7 +648,11 @@
 
 				<section data-background="resources/converted/crop_crop_image.gif" data-background-interactive data-state="logo-position-hidden">
 					<aside class="notes">
-						Add cropped image to article.
+            <ul>
+              <li>Finally we can add a cropped image to article.</li>
+              <li>We see that we reached the soft and hard limits now and that the cropping is not possible for this size.</li>
+              <li>We can still crop an image if we get a warning that we passed the soft limits, but we can still save it.</li>
+            </ul>
 					</aside>
 				</section>
 
