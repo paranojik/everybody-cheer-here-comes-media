@@ -120,3 +120,11 @@ section.has-dark-background {
 .media-team li {
 	display: inline-block;
 }
+
+.distributions div {
+	float: left;
+	width: 50%;
+	img {
+		box-shadow: none;
+	}
+}

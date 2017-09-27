@@ -344,3 +344,9 @@ body {
 
 .media-team li {
   display: inline-block; }
+
+.distributions div {
+  float: left;
+  width: 50%; }
+  .distributions div img {
+    box-shadow: none; }
