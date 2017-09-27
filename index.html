@@ -222,12 +222,7 @@
 				<!-- TODO: find dissapointing gify -->
 				<section data-background="resources/gifs/disapprove.gif" data-state="logo-position-hidden">
 					<h2 style="color: white;">... or is it ?!</h2>
-					<aside class="notes">
-						- Amazing right? Or is it? <br />
-						- We still can’t even reuse images. Embedding only works for images and even that without cropping or resizing. <br />
-						- Files are not fully fledged entities so whatever attributes they currently support - that’s it. You’re not able to add additional custom fields to files or images. (for example copyright information). <br />
-						- What about videos? How do we link videos from youtube or vimeo? Or images from Flick or… you name it? How can we embed these kind of media? Do we have or want modules that create a field type for each and every one of them like we did in drupal 7?
-					</aside>
+
 				</section>
 
 
@@ -247,9 +242,10 @@
 						</li>
 					</ul>
 					<aside class="notes">
-						- Of course we don’t. That’s why a group of people got together at DrupalCon prague in 2013. Janez Urevc held a core conversation was titled “LET’S FIX FILE AND MEDIA HANDLING ONCE AND FOR ALL”. <br />
-						- A plan was drafted for generic media handling. Later next year at Drupal camp NYC the media initiative was formed and a huge effort has been undertaken - unify media handling  and provide a generic and versatile base for all kinds of media solutions. This is how media_entity was born. <br />
-						- Main goals: Media library, reuse of images, upload images to your server, remote media from services like youtube, flickr, Generic handling of media with embedding, cropping and metadata. <br />
+						- Amazing right? Or is it? <br />
+						- We still can’t even reuse images. Embedding only works for images and even that without cropping or resizing. <br />
+						- Files are not fully fledged entities so whatever attributes they currently support - that’s it. You’re not able to add additional custom fields to files or images. (for example copyright information). <br />
+						- What about videos? How do we link videos from youtube or vimeo? Or images from Flick or… you name it? How can we embed these kind of media? Do we have or want modules that create a field type for each and every one of them like we did in drupal 7?
 					</aside>
 				</section>
 
@@ -271,9 +267,9 @@
 						</li>
 					</ul>
 					<aside class="notes">
-						- The Media entity module provides a 'base' entity for storing media. This is a normal content entity (just like node) which can reference all kinds of media-objects (local files - meaning on your server, YouTube videos, Tweets, Instagram photos, ...). Media entity provides a relation between Drupal and the actual media resource. You can reference this entity within any other Drupal entity via the Entity reference field. <br />
-						- Media introduces the notion of Media sources. Media sources are plugins that implement the actual retrieval of the linked media object and its metadata and propagate storage to Drupal fields. <br />
-						- On youtube you have a video a description thumbnail… In the past it was hard to use that. There was no standardized way of fetching and exposing that data on the site. With media entity we now have metadata fields and you can map those from the Source to local fields.” Tweet author, id, retweet count,...
+						- Of course we don’t. That’s why a group of people got together at DrupalCon prague in 2013. Janez Urevc held a core conversation was titled “LET’S FIX FILE AND MEDIA HANDLING ONCE AND FOR ALL”. <br />
+						- A plan was drafted for generic media handling. Later next year at Drupal camp NYC the media initiative was formed and a huge effort has been undertaken - unify media handling  and provide a generic and versatile base for all kinds of media solutions. This is how media_entity was born. <br />
+						- Main goals: Media library, reuse of images, upload images to your server, remote media from services like youtube, flickr, Generic handling of media with embedding, cropping and metadata. <br />
 					</aside>
 				</section>
 
@@ -292,11 +288,11 @@
 						<li>Mapping of metadata to entity fields</li>
 					</ul>
 					<aside class="notes">
-						- After the official media initiative was announced at DrupalCon New Orleans work has begun to bring the media_entity into core. It is now called only “Media”. It’s a stable but hidden module. It is hidden because it actually doesn’t do much on it’s own. So far it only provides support for local images and documents (pdf,...) and a lot of the usability stuff needs to be addressed. So it is still up to contrib to leverage the media APIs and extend the functionality just as before. <br />
-						- Media_entity is committed to core as stable but because a lot of the contrib is not yet ported to the new API and the upgrade path is not ready yet it is a hidden module and a lot of the usability stuff like sensible defaults, formatters and widgets are not in place yet. Media is an API module and does nothing special on it’s own. <br />
-						- Currently the media initiative is also working on porting the existing media_entity ecosystem to be compatible with the recent changes in core. If you’re a developer and you want to help with you can join the sprints which are happening here at DCon vienna on Friday. <br />
-						- But let’s not underestimate the impact this has on the overall progress of Drupal. The task and ultimate goal of core is not only to provide functionality but most importantly to set standards and provide APIs that contrib can then follow along, extend that functionality and provide richer customized experiences.
+						- The Media entity module provides a 'base' entity for storing media. This is a normal content entity (just like node) which can reference all kinds of media-objects (local files - meaning on your server, YouTube videos, Tweets, Instagram photos, ...). Media entity provides a relation between Drupal and the actual media resource. You can reference this entity within any other Drupal entity via the Entity reference field. <br />
+						- Media introduces the notion of Media sources. Media sources are plugins that implement the actual retrieval of the linked media object and its metadata and propagate storage to Drupal fields. <br />
+						- On youtube you have a video a description thumbnail… In the past it was hard to use that. There was no standardized way of fetching and exposing that data on the site. With media entity we now have metadata fields and you can map those from the Source to local fields.” Tweet author, id, retweet count,...
 					</aside>
+
 				</section>
 
 
@@ -314,8 +310,10 @@
 						</li>
 					</ul>
 					<aside class="notes">
-						- Media source plugins are usually implemented in separate modules. (image and documents are in core 8.4).
-						- So.. when we want to create a new media type we have to specify the media source and optionally additional metadata mapping and/or other source specific settings.
+						- After the official media initiative was announced at DrupalCon New Orleans work has begun to bring the media_entity into core. It is now called only “Media”. It’s a stable but hidden module. It is hidden because it actually doesn’t do much on it’s own. So far it only provides support for local images and documents (pdf,...) and a lot of the usability stuff needs to be addressed. So it is still up to contrib to leverage the media APIs and extend the functionality just as before. <br />
+						- Media_entity is committed to core as stable but because a lot of the contrib is not yet ported to the new API and the upgrade path is not ready yet it is a hidden module and a lot of the usability stuff like sensible defaults, formatters and widgets are not in place yet. Media is an API module and does nothing special on it’s own. <br />
+						- Currently the media initiative is also working on porting the existing media_entity ecosystem to be compatible with the recent changes in core. If you’re a developer and you want to help with you can join the sprints which are happening here at DCon vienna on Friday. <br />
+						- But let’s not underestimate the impact this has on the overall progress of Drupal. The task and ultimate goal of core is not only to provide functionality but most importantly to set standards and provide APIs that contrib can then follow along, extend that functionality and provide richer customized experiences.
 					</aside>
 				</section>
 
