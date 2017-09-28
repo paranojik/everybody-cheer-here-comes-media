@@ -326,7 +326,6 @@
 					notesValue,
 					currentState,
 					currentSlide,
-					upcomingSlide,
 					layoutLabel,
 					layoutDropdown,
 					connected = false;
@@ -415,9 +414,6 @@
 
 					// Update the note slides
 					currentSlide.contentWindow.postMessage( JSON.stringify({ method: 'setState', args: [ data.state ] }), '*' );
-					upcomingSlide.contentWindow.postMessage( JSON.stringify({ method: 'setState', args: [ data.state ] }), '*' );
-					upcomingSlide.contentWindow.postMessage( JSON.stringify({ method: 'next' }), '*' );
-
 				}
 
 				// Limit to max one state update per X ms
@@ -460,13 +456,6 @@
 					currentSlide.setAttribute( 'height', 1024 );
 					currentSlide.setAttribute( 'src', currentURL );
 					document.querySelector( '#current-slide' ).appendChild( currentSlide );
-
-					upcomingSlide = document.createElement( 'iframe' );
-					upcomingSlide.setAttribute( 'width', 640 );
-					upcomingSlide.setAttribute( 'height', 512 );
-					upcomingSlide.setAttribute( 'src', upcomingURL );
-					document.querySelector( '#upcoming-slide' ).appendChild( upcomingSlide );
-
 				}
 
 				/**
