@@ -228,7 +228,7 @@
 				<section data-state="logo-position-normal">
 					<h1>Drupal 8 “out of the box”</h1>
 					<ul>
-						<li>Basic image upload</li>
+						<li>Basic image/file upload</li>
 						<li>CKEditor + embedding</li>
 						<li>Basic file listing with usage info</li>
 						<li><strong>Limitations (still)</strong>
@@ -241,8 +241,7 @@
 						</li>
 					</ul>
 					<aside class="notes">
-						- Amazing right? Or is it? <br />
-						- We still can’t even reuse images. Embedding only works for images and even that without cropping or resizing. <br />
+						- We still can’t reuse images. Embedding only works for images and even that without cropping or resizing. <br />
 						- Files are not fully fledged entities so whatever attributes they currently support - that’s it. You’re not able to add additional custom fields to files or images. (for example copyright information). <br />
 						- What about videos? How do we link videos from youtube or vimeo? Or images from Flick or… you name it? How can we embed these kind of media? Do we have or want modules that create a field type for each and every one of them like we did in drupal 7?
 					</aside>
@@ -251,9 +250,8 @@
 
 				<section data-state="logo-position-normal">
 					<h1>Media initiative</h1>
+					<p>Main goals:</p>
 					<ul>
-						<li>Prague - NY - New Orelans</li>
-						<li>Media_entity ecosystem</li>
 						<li>Ability to reuse content</li>
 						<li>Media library</li>
 						<li>Remote media sources</li>
@@ -276,7 +274,7 @@
 				<section data-state="logo-position-normal">
 					<h1>Media entity</h1>
 					<ul>
-						<li>Propagate storage to fields</li>
+						<li>Media is content entity</li>
 						<li>Media types make use of Media source plugins</li>
 						<li>Media sources provide metadata:
 							<ul>
@@ -301,13 +299,8 @@
 					<ul>
 						<li>Media Entity -> Media in Drupal 8.4</li>
 						<li>Improved API</li>
-						<li>Basic types: Image, Document (now in core)</li>
-						<li>Contrib:
-							<ul>
-								<li>Video (video_embed_field)</li>
-								<li>Twitter (media_entity_twitter)</li>
-							</ul>
-						</li>
+						<li>Basic types: Image, Document</li>
+						<li>Everything else in contrib</li>
 					</ul>
 					<aside class="notes">
 						- After the official media initiative was announced at DrupalCon New Orleans work has begun to bring the media_entity into core. It is now called only “Media”. It’s a stable but hidden module. It is hidden because it actually doesn’t do much on it’s own. So far it only provides support for local images and documents (pdf,...) and a lot of the usability stuff needs to be addressed. So it is still up to contrib to leverage the media APIs and extend the functionality just as before. <br />
@@ -362,7 +355,9 @@
 
 
 				<section data-state="logo-position-normal">
-					<h1>Entity browser</h1>
+					<h1>Improving the experience</h1>
+					<p>with</p>
+					<h2>Entity browser</h2>
 				</section>
 
 
@@ -385,9 +380,6 @@
 					<p style="font-size: 18px; color: grey;">Source: <a href="https://slashrsm.github.io/entity-browser-session/#/architecture-wireframe">https://slashrsm.github.io/entity-browser-session/#/architecture-wireframe</a></p>
 					<aside class="notes">
 						- It has a pluggable architecture, meaning everybody can implement parts which best suit their needs. <br />
-						- The main part is called the WIDGET. That’s where the entity selection is taking place. It could be a view or an upload form, a form connected to some external DAM system, etc… <br />
-						- On top we have the “Widget selector” Part that defines how switching between widgets work. Can be dropdown, buttons, tabs,... <br />
-						- At the bottom we have the “Selection display”: This part that displays entities that are currently selected. It’s like some sort of clipboard. <br />
 					</aside>
 				</section>
 
@@ -396,6 +388,7 @@
 					<img src="resources/eb_architecture-widget.png" style="max-height: 600px">
 					<p style="font-size: 18px; color: grey;">Source: <a href="https://slashrsm.github.io/entity-browser-session/#/architecture-wireframe">https://slashrsm.github.io/entity-browser-session/#/architecture-wireframe</a></p>
 					<aside class="notes">
+						- The main part is called the WIDGET. That’s where the entity selection is taking place. It could be a view or an upload form, a form connected to some external DAM system, etc…
 					</aside>
 				</section>
 
@@ -404,6 +397,7 @@
 					<img src="resources/eb_architecture-selector.png" style="max-height: 600px">
 					<p style="font-size: 18px; color: grey;">Source: <a href="https://slashrsm.github.io/entity-browser-session/#/architecture-wireframe">https://slashrsm.github.io/entity-browser-session/#/architecture-wireframe</a></p>
 					<aside class="notes">
+						- On top we have the “Widget selector” Part that defines how switching between widgets work. Can be dropdown, buttons, tabs,...
 					</aside>
 				</section>
 
@@ -412,6 +406,7 @@
 					<img src="resources/eb_architecture-selectiondisplay.png" style="max-height: 600px">
 					<p style="font-size: 18px; color: grey;">Source: <a href="https://slashrsm.github.io/entity-browser-session/#/architecture-wireframe">https://slashrsm.github.io/entity-browser-session/#/architecture-wireframe</a></p>
 					<aside class="notes">
+						- At the bottom we have the “Selection display”: This part that displays entities that are currently selected. It’s like some sort of clipboard.
 					</aside>
 				</section>
 
