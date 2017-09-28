@@ -40,13 +40,12 @@
 					<h2>Everybody cheer! Here comes media!</h2>
 					<p><small>Saša Nikolič, Tadej Baša</small></p>
 					<aside class="notes">
-						- You’ve probably heard there’s a lot going on around Media in Drupal 8 recently.
-						<br />
-						- How many of you already use Media in your projects or are familiar with it?
-						<br />
-						- In this talk we’d like to show what the fuss is all about.
-						<br />
-						- A huge amount of work has been invested in the recent years and we finally have a really flexible architecture and powerful ecosystem for handling media.
+						<ul>
+							<li>You’ve probably heard there’s a lot going on around Media in Drupal 8 recently. How many of you already use Media in your projects or are familiar with it?</li>
+							<li>We strongly believe that media is at the heart of a great website experience. Everybody loves having big images, videos, audio files on their websites - this is what brings a website to life for your users. Let’s see some specific issues that we faced when handling media in Drupal 7:</li>
+							<li>A huge amount of work has been invested in the recent years and we finally have a really flexible architecture and powerful ecosystem for handling media.</li>
+							<li>In this talk we’d like to show what the fuss is all about.</li>
+						</ul>
 					</aside>
 				</section>
 
@@ -75,8 +74,6 @@
 					</p>
 					<aside class="notes">
 						- We are Saša and Tadej, we both come from Slovenia (yes, it’s that small country just south of Austria :)) and we both work at Amazee Labs Zurich.
-						<br />
-						- I've been an active member of the Drupal community for almost 3 years now, and Tadej for long 12 years.
 					</aside>
 				</section>
 
@@ -95,7 +92,7 @@
 					<aside class="notes">
 						- We’d like to start by giving some context about the problems we faced using Drupal in the past and then proceed with how these were addressed in Drupal 8 and how the Media entity ecosystem brought all this to a whole new level.
 						<br />
-						- So basically, we’ll start from scratch and show you how step-by-step how we can easily improve media handling in Drupal 8 from a very simple example and gradually add more complexity.
+						- So basically, we’ll start from scratch and show you step-by-step how we can easily improve media handling in Drupal 8 from a very simple example and gradually add more complexity.
 						<br />
 						- We’ll take a look at the base Media module and what it provides, then we will proceed with the entity browser module, dropzoneJS for bulk uploads, we'll explain the embedding functionality and finally show two cropping solutions. There will also be some time at the end for some discussion.
 					</aside>
@@ -136,7 +133,6 @@
 						<li>Cannot reuse files</li>
 					</ul>
 					<aside class="notes">
-						We strongly believe that media is at the heart of a great website experience. Everybody loves having big images, videos, audio files on their websites - this is what brings a website to life for your users. Let’s see some specific issues that we faced when handling media in Drupal 7:
 						<ul>
 							<li>So when you installed drupal 7 out of the box… what kind of functionality did you get? Well, you didn’t really get much. You didn’t get an editor and there was no proper media management.</li>
 							<li>Basically there were just image and file fields and the interactions with files are very limited, that means that we cannot add any metadata (like caption, copyright info) to them (because they are not entities).</li>
@@ -421,7 +417,7 @@
 						<li>In combination with Inline Entity Form</li>
 					</ul>
 					<aside class="notes">
-						<ul>So possible use cases would be:
+						<ul>Some of the possible use cases would be:
 							<li>selecting images from a library</li>
 							<li>Uploading images in bulk</li>
 							<li>It even supports a very flexible multi-step workflow</li>
@@ -611,7 +607,10 @@
 						</li>
 					</ul>
 					<aside class="notes">
-            The Crop API provides storage for “hopefully” all cropping solutions. It is able to handle crops based on region and reference point concepts. We won’t get into details, but rather show two different implementations based on the Crop API.<br /></li>
+						<ul>
+							<li>The Crop API provides storage for “hopefully” all cropping solutions. It is able to handle crops based on region and reference point concepts.</li>
+							<li>For the first one we use the Image widget Crop, and for the reference point we use the Focal point module.</li>
+						</ul>
           </aside>
 				</section>
 
