@@ -272,14 +272,13 @@
 					<ul>
 						<li>Media is content entity</li>
 						<li>Media types make use of Media source plugins</li>
-						<li>Media sources provide metadata:
+						<li>Media sources:
 							<ul>
-								<li>Thumbnail</li>
-								<li>Description</li>
-								<li>Size</li>
+								<li>Define how the linked media object is stored</li>
+								<li>Provide metadata: e.g. Thumbnail, Description, Size</li>
+								<li>Mapping of metadata to entity fields</li>
 							</ul>
 						</li>
-						<li>Mapping of metadata to entity fields</li>
 					</ul>
 					<aside class="notes">
 						- The Media entity module provides a 'base' entity for storing media. This is a normal content entity (just like node) which can reference all kinds of media-objects (local files - meaning on your server, YouTube videos, Tweets, Instagram photos, ...). Media entity provides a relation between Drupal and the actual media resource. You can reference this entity within any other Drupal entity via the Entity reference field. <br />
